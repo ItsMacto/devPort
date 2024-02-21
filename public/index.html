@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Howe</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Mac's Portfolio Logo" class="logo-image"> 
+        </div>
+        <div class="nav-links">
+            <a href="#intro">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Introduction Section -->
+<section id="intro">
+    <div class="hero-overlay">
+        <h1>Hi, I'm Mac</h1>
+        <p>Aspiring Software Developer at Clemson University.</p>
+        <div class="button-container">
+            <a href="#projects" class="cta-button">See My Work</a> 
+            <a href="./documents/Jan 2 2024 resume.pdf" download="Mac_Howe_Resume.pdf" class="cta-button">Download Resume</a>
+        </div>
+
+
+        <div class="shape1"></div>
+        <div class="shape2"></div>
+    </div>
+    
+    
+</section>
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>C/C++</li>
+            <li>Python</li>
+            <li>Database Design</li>
+            <li>PL/SQL</li>
+            <li>Oracle APEX</li>
+            
+        </ul>
+        <ul>
+            <li>Problem Solving</li>
+            <li>Communication </li>
+
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Advent of Code 2023</h3>
+            <p>My work so far on solving the Advent of Code for 2023 in python. Check out Advent of Code <a href="https://adventofcode.com" target="_blank" class="custom-link">here</a>.</p>
+            <a href="https://github.com/ItsMacto/AdventOfCode2023" target="_blank" class="github-link">View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h3>Book Recommender System</h3>
+            <p>Built in C++, the Book Recommender System showcases object-oriented principles, advanced algorithms, and optimized data structures to deliver tailored book recommendations. Drawing data from files, the system parses and manages a list of users, books, and their respective ratings. Emphasizing efficiency and data integrity, unique book entries are maintained using sets, while maps expedite rapid data lookups. Use of vectors of object pointer insure a many to many (book and user) relationship can be maintain in a no duplicative manner.  A dot-plot inspired algorithm identifies users with congruent reading tastes, serving suggestions of unread books that align with their preferences. Exception handling ensures robustness, gracefully addressing potential discrepancies like invalid ratings. 
+            </p>
+            <a href="https://github.com/ItsMacto/recommendation-system" target="_blank" class="github-link">View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h3>CPSC 2120 - Data structures and Algorithms</h3>
+            
+            <h4>Assignments</h4>
+            <ul>
+                <li>Implemented a Min Heap from a vector</li>
+                <li>Implemented a Queue using a Circular Array</li>
+                <li>Created a Anagram finder using a Hash Table</li>
+                <li>Implemented a stack for a postfix calculator</li>
+                <li>Implemented logic to swap nodes in a doubly linked list</li>
+                <li>Implemented a graph with Breadth First Search to find word similarity (word ladder)</li>
+            </ul>
+            
+            <h4>Labs</h4>
+            <ul>
+                <li>Lab 1: Creates a linked list then implements a stack and queue using the linked list</li>
+                <li>Lab 2: Uses a stack to convert infix to postfix notation</li>
+                <li>Lab 3: Uses recursion to find groups in a grid</li>
+                <li>Lab 4: Implementation of Merge Sort, Quick Sort, linear search, and binary search</li>
+                <li>Lab 5: Created custom Hash Set for strings</li>
+                <li>Lab 6: Using spatial hashing to find the closest pair of points in a 2D plane</li>
+                <li>Lab 7: Implemented a randomly balanced binary search tree</li>
+                <li>Lab 8: Similar to the functions from lab 7 except the insertions and splitting are now based on rank instead of value</li>
+                <li>Lab 9: Using recursion to solve the N-Queens problem</li>
+                <li>Lab 10: Using Breath Fist Search to solve puzzles</li>
+                <li>Lab 11: Solving a NP-Hard problem using iterative refinement</li>
+            </ul>
+            
+            <a href="path_to_github_repo" target="_blank" class="github-link">View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h3>CPSC 2310 - Computer Organizations</h3>
+            <p>Code for Computer Organizations class. All work is done in C. Learned implementation of multiple files, working with file I/O, Creating PPM Images, and Bitwise operations.</p>
+            <a href="https://github.com/ItsMacto/CPSC-2310" target="_blank" class="github-link">View on GitHub</a>
+        </div>
+    </section>
+
+<!-- Experience Section -->
+<section id="experience">
+    <h2>Experience</h2>
+
+    <!-- LTN Global Internship -->
+    <div class="job-card">
+        <h3>Internship at LTN Global</h3>
+        <p>Jul 2022 - Aug 2022 · 2 mos</p>
+        <p>Alpharetta, Georgia, United States · Hybrid</p>
+        <p>I learned a lot from the team about professionalism and what a day in the life of a software developer looks like. I was able to contribute to several projects, including writing Confluence documentation/spreadsheets over the control flow for code repositories and configuring the company's virtual machine ISO so that the boot screen (by GRUB) matched with the company's logo and theme.</p>
+    </div>
+
+    <!-- Arc-Two Consulting, Inc. Internship -->
+    <div class="job-card">
+        <h3>Internship at Arc-Two Consulting, Inc.</h3>
+        <p>May 2023 - Aug 2023 · 4 mos</p>
+        <p>Marietta, Georgia, United States · On-site</p>
+        <p>At Arc-Two, I've had the experience of learning hands-on the inner workings of the utility industry, delving deep into asset accounting, financial systems, and customer relationship management software. I have also had the unique opportunity to spearhead my own project, where I designed SQL database structures and implemented PL/SQL logic, data integration, and methods for customer visualization. However, I've learned the most from the journey of managing a project, from defining the requirements and conceptualizing ideas to its implementation. This has allowed me to lead in brainstorming at meetings and working with senior members.</p>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+<section id="contact">
+    <div class="container"> <!-- Wrapping content inside a container for alignment -->
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                📧 <a href="mailto:mac@machowe.com">mac@machowe.com</a>
+            </div>
+            <div class="contact-item">
+                🌐 <a href="https://linkedin.com/in/machowe" target="_blank">linkedin.com/in/machowe</a>
+            </div>
+            <div class="contact-item">
+                📁 <a href="https://github.com/ItsMacto" target="_blank">github.com/ItsMacto</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>

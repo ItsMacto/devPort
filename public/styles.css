@@ -1,0 +1,408 @@
+:root {
+    --primary-bg-color: #2f2f2f;
+    --primary-font-color: #333;
+    --section-bg-color: #f5f5f5;
+    --card-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    --gradient-color-1: #FFB6A6;
+    --gradient-color-2: #C892E1;
+}
+
+
+
+
+/* Global Styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; 
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700; 
+    line-height: 1.3;
+}
+
+p ,ul, li{
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+body {
+    background-color: var(--section-bg-color);
+    color: var(--primary-font-color);
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--primary-bg-color);
+    padding: .6rem 0;
+    position: sticky;
+    top: 0;
+    height: 15px;
+    z-index: 1000;
+    box-shadow: var(--card-shadow);
+
+}
+
+.logo {
+    color: white;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-right: auto; 
+    padding-left: 20px; 
+}
+
+.logo-image {
+    height: 40px;  
+    width: auto;   
+    margin-right: 20px;  
+}
+
+.nav-links {
+    display: flex;
+    gap: .1rem;
+    list-style-type: none;
+    align-items: end;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 14px; 
+    font-weight: 200; 
+    
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    color: var(--section-bg-color);
+}
+
+#skills, #projects, #experience, #contact {
+    padding-top: 1rem !important; 
+}
+
+
+/* Introduction styles */
+#intro {
+    background: linear-gradient(135deg, var(--gradient-color-1), var(--gradient-color-2));  
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 10%; /* Indent text from the left */
+    position: relative;
+    overflow: hidden; /* Hide shapes that might overflow the section boundaries */
+}
+
+
+#intro h1 {
+    font-size: 4.5em;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+#intro p {
+    font-size: 2em;
+    margin-bottom: 2rem;
+    max-width: 60%; /* Restrict the width of the text for better readability */
+}
+
+#intro h1,
+#intro p,
+.cta-button {
+    position: relative;
+    z-index: 2;
+}
+
+#intro::before, #intro::after, #intro .shape1, #intro .shape2 {
+    content: "";
+    position: absolute;
+    background: linear-gradient(45deg, rgba(255,182,166,0.1), rgba(200,146,225,0.3));
+    z-index: 1; /* Place behind the text content */
+}
+
+#intro::before {
+    width: 30em;
+    height: 30em;
+    top: -10%;
+    right: 10%;
+    border-radius: 50%; /* Create a circle */
+}
+
+#intro::after {
+    width: 15em;
+    height: 40em;
+    bottom: 10%;
+    left: -15%;
+    clip-path: polygon(0 0, 100% 0, 50% 100%); /* Create a triangle */
+}
+
+#intro .shape1 { 
+    width: 10em;
+    height: 10em;
+    top: 10%;
+    left: 5%;
+    background: rgba(255,182,166,0.5); 
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Triangle */
+}
+
+#intro .shape2 { 
+    width: 7em;
+    height: 7em;
+    bottom: 5%;
+    right: 5%;
+    background: rgba(200,146,225,0.4); 
+    border-radius: 50%; /* Circle */
+}
+
+
+
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.cta-button {
+    background-color: #C06C84;
+    padding: 0.8rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+    flex-direction: column;
+}
+
+.cta-button:focus,
+.project-card:focus, 
+.job-card:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(192,108,132,0.5); 
+}
+
+.cta-button:hover {
+    background-color: #C892E1;
+    transform: scale(1.05); /* Slight scale on hover for engagement */
+}
+
+
+/* Skills styles */
+#skills {
+    background-color: white;
+    padding: 4rem 0;
+    text-align: center;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+
+}
+
+#skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+
+}
+
+#skills ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 1em;
+}
+
+#skills li {
+    font-size: 1.4em;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#skills li:hover {
+    background-color:  var(--section-bg-color);
+    cursor: pointer;
+}
+
+/* Projects styles */
+#projects {
+    background-color:  var(--section-bg-color);
+    padding: 4rem 0;
+}
+
+#projects h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s;
+}
+
+.project-card li{
+    margin-left: 1em;
+}
+
+.project-image {
+    width: 100%; /* Take full width of the container */
+    max-height: 200px; 
+    object-fit: cover; /* Crop the image to fit the container */
+    border-radius: 10px; /* Rounded corners for the image */
+    margin-bottom: 15px; /* Some space below the image */
+}
+
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.project-card:nth-child(odd) {
+    margin-right: 30%; 
+}
+
+.project-card:nth-child(even) {
+    margin-left: 30%; 
+}
+.custom-link {
+    color: inherit; /* This makes the link use the text color of the parent element */
+    text-decoration: underline; /* Underlines the text */
+}
+
+.custom-link:hover, .custom-link:visited {
+    color: inherit; /* Keeps the link color consistent even after visiting or hovering */
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.github-link:hover {
+    background-color: #555;
+}
+
+
+/* Experience styles */
+#experience {
+    background-color: white;
+    padding: 4rem 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+#experience h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.job-card {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.job-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Contact styles */
+#contact {
+    background-color: #f5f5f5;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+}
+
+#contact a {
+    font-size: 1.4em;
+    color: var(--primary-bg-color);
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: #FFB6A6; 
+}
+
+
+.job-card h3, .project-card h3, .project-card h4 {
+    color: #555; /* Slightly darker color for the date for better visibility */
+    font-size: 1.2em; /* Increased font size */
+    margin-bottom: 0.5rem; /* Space between date and description */
+}
+
+.job-card p:nth-of-type(2) {
+    color: #777; /* Color for the location */
+    font-size: 1em; 
+    margin-bottom: 1rem; /* Space between location and main content */
+}
+
+
+#contact {
+    padding: 1rem 0;  
+}
+
+#contact h2 {
+    font-size: 1.5em;  
+    margin-bottom: 1rem;
+    font-weight: 400;  
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    gap: 1rem;  
+}
+
+.contact-item {
+    margin-bottom: 0;  
+}
+
+#contact a {
+    font-size: 1em;  
+    color: var(--primary-bg-color);
+    transition: color 0.3s;
+    text-decoration: none;  
+}
+
+#contact a:hover {
+    color: var(--gradient-color-1); 
+}
