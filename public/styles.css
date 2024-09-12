@@ -106,6 +106,21 @@ nav {
     padding-left: 10%; /* Indent text from the left */
     position: relative;
     overflow: hidden; /* Hide shapes that might overflow the section boundaries */
+    background-size: 200% 200%; /* Ensure the background is large enough for the animation */
+    animation: moveGradient 15s ease infinite; /* Animation name, duration, and easing */
+
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 
@@ -136,12 +151,14 @@ nav {
     z-index: 1; /* Place behind the text content */
 }
 
+/* Shapes Animations */
 #intro::before {
     width: 30em;
     height: 30em;
     top: -10%;
     right: 10%;
-    border-radius: 50%; /* Create a circle */
+    border-radius: 50%; 
+    animation: moveShape1 50s ease-in-out infinite; /* Shape animation */
 }
 
 #intro::after {
@@ -149,7 +166,8 @@ nav {
     height: 40em;
     bottom: 10%;
     left: -15%;
-    clip-path: polygon(0 0, 100% 0, 50% 100%); /* Create a triangle */
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    animation: moveShape2 18s ease-in-out infinite; /* Shape animation */
 }
 
 #intro .shape1 { 
@@ -158,7 +176,8 @@ nav {
     top: 10%;
     left: 5%;
     background: rgba(255,182,166,0.5); 
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Triangle */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: rotateAndMoveShape1 60s linear infinite;
 }
 
 #intro .shape2 { 
@@ -166,8 +185,82 @@ nav {
     height: 7em;
     bottom: 5%;
     right: 5%;
-    background: rgba(200,146,225,0.4); 
-    border-radius: 50%; /* Circle */
+    background: rgba(200,146,225,0.4);
+    border-radius: 50%;
+    animation: rotateAndMoveShape2 22s linear infinite;
+}
+
+/* Keyframes for more dramatic shape animations */
+@keyframes moveShape1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(50px, -100px); /* Move farther */
+    }
+    50% {
+        transform: translate(-150px, 100px); /* Move in the opposite direction */
+    }
+    75% {
+        transform: translate(100px, -50px); /* Move in another direction */
+    }
+    100% {
+        transform: translate(0, 0); /* Return to the original position */
+    }
+}
+
+@keyframes moveShape2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-50px, 80px); /* Move farther */
+    }
+    50% {
+        transform: translate(100px, -120px); /* Move in the opposite direction */
+    }
+    75% {
+        transform: translate(-150px, 60px); /* Move in another direction */
+    }
+    100% {
+        transform: translate(0, 0); /* Return to the original position */
+    }
+}
+
+@keyframes rotateAndMoveShape1 {
+    0% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+    25% {
+        transform: rotate(90deg) translate(120px, -150px); /* Rotate and move farther */
+    }
+    50% {
+        transform: rotate(180deg) translate(-180px, 100px); /* Opposite direction */
+    }
+    75% {
+        transform: rotate(270deg) translate(150px, -80px); /* Another direction */
+    }
+    100% {
+        transform: rotate(360deg) translate(0, 0); /* Complete rotation */
+    }
+}
+
+@keyframes rotateAndMoveShape2 {
+    0% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+    25% {
+        transform: rotate(-90deg) translate(-40px, 80px); /* Adjusted movement to keep it in view */
+    }
+    50% {
+        transform: rotate(-180deg) translate(60px, -60px); /* Keep it closer to the right side */
+    }
+    75% {
+        transform: rotate(-270deg) translate(-50px, 40px); /* Moderate movement */
+    }
+    100% {
+        transform: rotate(-360deg) translate(0, 0); /* Return to original position */
+    }
 }
 
 
