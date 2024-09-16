@@ -386,6 +386,7 @@ nav {
 .custom-link {
     color: inherit; /* This makes the link use the text color of the parent element */
     text-decoration: underline; /* Underlines the text */
+    font-weight: 500; 
 }
 
 .custom-link:hover, .custom-link:visited {
