@@ -396,7 +396,8 @@ nav {
 .github-link {
     display: inline-block;
     margin-top: 10px;
-    padding: 5px 10px;
+    padding: 5px 10px ;
+    margin-right: 20px;
     background-color: #333;
     color: #fff;
     text-decoration: none;
